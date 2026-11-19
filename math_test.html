@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Math Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .quiz-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .radio-label {
+            font-weight: normal;
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+        button[type="submit"] {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+        button[type="submit"]:hover {
+            background-color: #1a252f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Online Math Test</h1>
+
+        <!-- Start of the Math Test -->
+        <form>
+            <!-- User Name Text Field -->
+            <div class="form-group">
+                <label for="studentName">Full Name:</label>
+                <input type="text" id="studentName" name="studentName" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Multiple Choice Question 1 (uses &times; and &divide;) -->
+            <div class="form-group">
+                <label>1. What is the value of (12 &times; 4) &divide; 6?</label>
+                <label class="radio-label">
+                    <input type="radio" name="q1" value="6"> 6
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="q1" value="8"> 8
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="q1" value="10"> 10
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="q1" value="12"> 12
+                </label>
+            </div>
+
+            <!-- Multiple Choice Question 2 (uses &pi; and &sup2;) -->
+            <div class="form-group">
+                <label>2. Which formula represents the area of a circle with radius r?</label>
+                <label class="radio-label">
+                    <input type="radio" name="q2" value="2pir"> 2&pi;r
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="q2" value="pir2"> &pi;r&sup2;
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="q2" value="pid"> &pi;d&sup2;
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="q2" value="halfpir"> &frac12;&pi;r
+                </label>
+            </div>
+
+            <!-- Multiple Choice Question 3 (uses &radic; and &plusmn;) -->
+            <div class="form-group">
+                <label>3. What are the solutions to x&sup2; = 49, or &radic;49?</label>
+                <label class="radio-label">
+                    <input type="radio" name="q3" value="7"> Only +7
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="q3" value="-7"> Only &minus;7
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="q3" value="pm7"> &plusmn;7
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="q3" value="49"> &plusmn;49
+                </label>
+            </div>
+
+            <!-- Word Problem with Multiline Text Area (uses &le; and &ge;) -->
+            <div class="form-group">
+                <label for="wordProblem">4. Word Problem: A budget allows spending no more than $150 (x &le; 150) on supplies. If you already spent $65 and buy notebooks that cost $5 each, write and solve an inequality showing how many notebooks (n) you can buy, and explain your steps.</label>
+                <textarea id="wordProblem" name="wordProblem" rows="5" placeholder="Show your work and type your answer here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit Test</button>
+            </div>
+        </form>
+        <!-- End of the Math Test -->
+    </div>
+
+</body>
+</html>
